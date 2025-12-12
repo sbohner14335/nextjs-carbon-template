@@ -29,20 +29,14 @@ export function Header() {
                         onClick={onClickSideNavExpand}
                         isActive={isSideNavExpanded}
                     />
-                    <Link href="/" passHref legacyBehavior>
-                        <HeaderName prefix="Carbon">Next.js Starter</HeaderName>
-                    </Link>
+                    <HeaderName href="/" prefix="Carbon" as={Link}>Next.js Starter</HeaderName>
                     <HeaderNavigation aria-label="Carbon Next.js Starter">
-                        <Link href="/" passHref legacyBehavior>
-                            <HeaderMenuItem isCurrentPage={pathname === "/"}>
-                                Home
-                            </HeaderMenuItem>
-                        </Link>
-                        <Link href="/repositories" passHref legacyBehavior>
-                            <HeaderMenuItem isCurrentPage={pathname === "/repositories"}>
-                                Repositories
-                            </HeaderMenuItem>
-                        </Link>
+                        <HeaderMenuItem href="/" isCurrentPage={pathname === "/"} as={Link}>
+                            Home
+                        </HeaderMenuItem>
+                        <HeaderMenuItem href="/repositories" isCurrentPage={pathname === "/repositories"} as={Link}>
+                            Repositories
+                        </HeaderMenuItem>
                     </HeaderNavigation>
                     <HeaderGlobalBar>
                         <HeaderGlobalAction
