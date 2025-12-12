@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Content, Theme } from "@carbon/react";
+import { Header } from "@/components/Header";
 import "@carbon/styles/css/styles.css";
-import "./globals.css";
+import "./globals.scss";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,8 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`cds-theme--g10 ${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Theme theme="g10">
+          <Header />
           <Content>{children}</Content>
         </Theme>
       </body>
