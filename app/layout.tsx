@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.scss";
 import { Content } from "@carbon/react";
 import { Header } from "@/components/Header";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Carbon Next.js Starter",
@@ -15,9 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="cds--g10">
-        <Header />
-        <Content>{children}</Content>
+      <body>
+        <Providers>
+          <Header />
+          <Content>{children}</Content>
+        </Providers>
       </body>
     </html>
   );

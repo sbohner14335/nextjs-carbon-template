@@ -27,7 +27,7 @@ export default function About() {
                     <Heading className={styles.sectionHeading}>What is this?</Heading>
                     <p className={styles.paragraph}>
                         This is a modern starter template combining the power of <strong>Next.js</strong> with
-                        IBM's <strong>Carbon Design System</strong>. It provides a solid foundation for building
+                        IBM&rsquo;s <strong>Carbon Design System</strong>. It provides a solid foundation for building
                         rapid, accessible, and performant web applications with enterprise-grade UI components.
                     </p>
                 </Section>
@@ -36,7 +36,7 @@ export default function About() {
                     <Heading className={styles.sectionHeading}>Features</Heading>
                     <UnorderedList className={styles.featureList}>
                         <ListItem className={styles.listItem}>
-                            <strong>Carbon Design System</strong> - IBM's open-source design system with 50+ React components
+                            <strong>Carbon Design System</strong> - IBM&rsquo;s open-source design system with 50+ React components
                         </ListItem>
                         <ListItem className={styles.listItem}>
                             <strong>Next.js</strong> - React framework with App Router and Turbopack

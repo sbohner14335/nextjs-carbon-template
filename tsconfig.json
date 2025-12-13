@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "next-themes": ["./lib/next-themes"]
     }
   },
   "include": [
