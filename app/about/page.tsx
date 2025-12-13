@@ -27,7 +27,7 @@ export default function About() {
                     <Heading className={styles.sectionHeading}>What is this?</Heading>
                     <p className={styles.paragraph}>
                         This is a modern starter template combining the power of <strong>Next.js</strong> with
-                        IBM&rsquo;s <strong>Carbon Design System</strong>. It provides a solid foundation for building
+                        IBM&rsquo;s <strong>Carbon Design System</strong>. <br /> It provides a solid foundation for building
                         rapid, accessible, and performant web applications with enterprise-grade UI components.
                     </p>
                 </Section>

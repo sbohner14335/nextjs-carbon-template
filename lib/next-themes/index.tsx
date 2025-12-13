@@ -98,7 +98,7 @@ export function ThemeProvider({
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setThemeState(storedTheme);
         applyThemeClass({ theme: storedTheme, value });
-    }, [defaultTheme, storageKey, value]);
+    }, [defaultTheme, storageKey]);
 
     const contextValue = useMemo<ThemeContextValue>(
         () => ({ theme, resolvedTheme: theme, themes, setTheme }),
