@@ -34,9 +34,22 @@ To use this template:
 
 ## Technologies
 <p>
-  <img alt="Next.js" src="https://img.shields.io/badge/-Next.js-000000?logo=Next.js&logoColor=white" />
-  <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-007ACC?logo=typescript&logoColor=white" />
-  <img alt="Carbon Design System" src="https://img.shields.io/badge/-Carbon_Design_System-0f62fe?logo=carbon&logoColor=white" />
-  <img alt="Sass" src="https://img.shields.io/badge/-Sass-CC6699?logo=sass&logoColor=white" />
-  <img alt="Node.js" src="https://img.shields.io/badge/-Node.js-43853d?logo=Node.js&logoColor=white" />
-  <img alt="npm" src="https://img.shields.io/badge/-NPM-CB3837?logo=npm&logoColor=white" />
+  <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+    <img alt="Next.js" src="https://img.shields.io/badge/-Next.js-000000?logo=Next.js&logoColor=white" />
+  </a>
+  <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
+    <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-007ACC?logo=typescript&logoColor=white" />
+  </a>
+  <a href="https://carbondesignsystem.com/" target="_blank" rel="noreferrer">
+    <img alt="Carbon Design System" src="https://img.shields.io/badge/-Carbon_Design_System-0f62fe?logo=carbon&logoColor=white" />
+  </a>
+  <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
+    <img alt="Sass" src="https://img.shields.io/badge/-Sass-CC6699?logo=sass&logoColor=white" />
+  </a>
+  <a href="https://nodejs.org/" target="_blank" rel="noreferrer">
+    <img alt="Node.js" src="https://img.shields.io/badge/-Node.js-43853d?logo=Node.js&logoColor=white" />
+  </a>
+  <a href="https://www.npmjs.com/" target="_blank" rel="noreferrer">
+    <img alt="npm" src="https://img.shields.io/badge/-NPM-CB3837?logo=npm&logoColor=white" />
+  </a>
+</p>
