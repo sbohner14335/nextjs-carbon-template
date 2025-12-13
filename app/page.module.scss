@@ -15,7 +15,6 @@
 
 .landingPageSubheading {
   font-size: 1.25rem;
-  font-weight: 300;
   margin-bottom: 2rem;
   max-width: 38rem;
 }
@@ -36,7 +35,6 @@
 .tileContent h3 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  font-weight: 400;
 }
 
 .tileIcon {
@@ -60,4 +58,12 @@
 
 .resourceList a:hover {
   text-decoration: underline;
+}
+
+.nextLogo {
+
+  /* Invert color when dark theme (g100) is active */
+  :global(.cds--g100) & {
+    filter: invert(1);
+  }
 }

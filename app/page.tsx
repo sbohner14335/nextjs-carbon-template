@@ -42,7 +42,7 @@ export default function Home() {
           <Column md={4} lg={4} sm={4}>
             <ClickableTile href="https://nextjs.org">
               <div className={styles.tileContent}>
-                <Image src="/next.svg" alt="Next.js" width={32} height={32} />
+                <Image src="/next.svg" alt="Next.js" width={32} height={32} className={styles.nextLogo} />
                 <h3>Next.js Framework</h3>
                 <p>The React Framework for the Web.</p>
                 <ArrowRight className={styles.tileIcon} />

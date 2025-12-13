@@ -2,46 +2,39 @@
 
 import { HeaderGlobalAction } from "@carbon/react";
 import { Asleep, Light } from "@carbon/icons-react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useTheme } from "next-themes";
 
 export function ThemeToggle() {
-    const [theme, setTheme] = useState<"g10" | "g100">("g10");
+    const { resolvedTheme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
-    // Initialize theme from localStorage after component mounts (client-side only)
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
-        const savedTheme = localStorage.getItem("carbon-theme") as "g10" | "g100" | null;
-        if (savedTheme) {
-            setTheme(savedTheme);
-        }
     }, []);
 
+    // Use resolvedTheme to get the actual applied theme (handles "system" -> "light"/"dark")
+    const isDark = useMemo(
+        () => resolvedTheme === "g100" || resolvedTheme === "dark",
+        [resolvedTheme],
+    );
+
     const toggleTheme = () => {
-        const newTheme = theme === "g10" ? "g100" : "g10";
-        setTheme(newTheme);
-        // Save to localStorage
-        localStorage.setItem("carbon-theme", newTheme);
+        setTheme(isDark ? "g10" : "g100");
     };
-
-    useEffect(() => {
-        if (!mounted) return; // Don't run on server-side
-
-        // Remove any existing Carbon theme classes and add the current one
-        document.body.classList.remove("cds--g10", "cds--g100");
-        document.body.classList.add(`cds--${theme}`);
-    }, [theme, mounted]);
 
     // Don't render until mounted to avoid hydration mismatch
     if (!mounted) return null;
 
     return (
         <HeaderGlobalAction
-            aria-label={theme === "g10" ? "Switch to dark theme" : "Switch to light theme"}
+            aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
             tooltipAlignment="end"
             onClick={toggleTheme}
         >
-            {theme === "g10" ? <Asleep size={20} /> : <Light size={20} />}
+            {isDark ? <Light size={20} /> : <Asleep size={20} />}
         </HeaderGlobalAction>
     );
 }
+
