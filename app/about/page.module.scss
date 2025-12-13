@@ -1,0 +1,71 @@
+.aboutPage {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.aboutHeader {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--cds-border-subtle);
+}
+
+.pageTitle {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.aboutContent {
+    padding-top: 3rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.sectionHeading {
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.paragraph {
+    margin-bottom: 1.5rem;
+    line-height: 1.75;
+    font-size: 1rem;
+}
+
+.featureList,
+.componentList,
+.stepsList,
+.resourceList {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.listItem {
+    margin-bottom: 1rem;
+    line-height: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.icon {
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.codeBlock {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.githubLink {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.githubIcon {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}

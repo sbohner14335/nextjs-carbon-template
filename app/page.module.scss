@@ -1,0 +1,63 @@
+.landingPage {
+  min-height: 100vh;
+}
+
+.landingPageBanner {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: var(--cds-ui-01);
+}
+
+.landingPageHeading {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.landingPageSubheading {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  max-width: 38rem;
+}
+
+.landingPageContent {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.tileContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 12rem;
+}
+
+.tileContent h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.tileIcon {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.resourceList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resourceList li {
+  margin-bottom: 0.5rem;
+}
+
+.resourceList a {
+  text-decoration: none;
+  color: var(--cds-link-primary);
+}
+
+.resourceList a:hover {
+  text-decoration: underline;
+}
