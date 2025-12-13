@@ -7,7 +7,7 @@ import {
   ClickableTile,
   Button,
 } from "@carbon/react";
-import { ArrowRight, LogoGithub, LogoReact } from "@carbon/icons-react";
+import { ArrowRight, LogoGithub, Carbon } from "@carbon/icons-react";
 import Image from "next/image";
 import styles from "./page.module.scss";
 
@@ -21,8 +21,9 @@ export default function Home() {
         <p className={styles.landingPageSubheading}>
           A starter template for building rapid, accessible, and performant web applications with the Carbon Design System.
         </p>
-        <Button renderIcon={ArrowRight} size="lg">
-          Get Started
+        <Button href="https://github.com/sbohner14335/nextjs-carbon-template?tab=readme-ov-file#getting-started" renderIcon={ArrowRight} size="lg">
+          <LogoGithub />
+          &emsp;Get Started
         </Button>
       </Column>
 
@@ -31,7 +32,7 @@ export default function Home() {
           <Column md={4} lg={4} sm={4}>
             <ClickableTile href="https://carbondesignsystem.com">
               <div className={styles.tileContent}>
-                <LogoReact size={32} />
+                <Carbon size={32} />
                 <h3>Carbon Design System</h3>
                 <p>Open source design system by IBM.</p>
                 <ArrowRight className={styles.tileIcon} />

@@ -38,8 +38,8 @@ export function Header() {
                             <HeaderMenuItem href="/" isCurrentPage={pathname === "/"} as={Link}>
                                 Home
                             </HeaderMenuItem>
-                            <HeaderMenuItem href="/repositories" isCurrentPage={pathname === "/repositories"} as={Link}>
-                                Repositories
+                            <HeaderMenuItem href="/about" isCurrentPage={pathname === "/about"} as={Link}>
+                                About
                             </HeaderMenuItem>
                         </HeaderNavigation>
                         <HeaderGlobalBar>

@@ -5,27 +5,39 @@ import { Asleep, Light } from "@carbon/icons-react";
 import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-    const [theme, setTheme] = useState("g10");
+    const [theme, setTheme] = useState<"g10" | "g100">("g10");
+    const [mounted, setMounted] = useState(false);
+
+    // Initialize theme from localStorage after component mounts (client-side only)
+    useEffect(() => {
+        setMounted(true);
+        const savedTheme = localStorage.getItem("carbon-theme") as "g10" | "g100" | null;
+        if (savedTheme) {
+            setTheme(savedTheme);
+        }
+    }, []);
 
     const toggleTheme = () => {
         const newTheme = theme === "g10" ? "g100" : "g10";
         setTheme(newTheme);
-        document.body.setAttribute("class", `cds-theme--${newTheme}`);
-        // Dispatch a custom event for Theme provider to listen to if needed, 
-        // or just rely on body class if global styles handle it.
+        // Save to localStorage
+        localStorage.setItem("carbon-theme", newTheme);
     };
 
     useEffect(() => {
-        // Initial set
-        document.body.setAttribute("class", `cds-theme--${theme}`);
-    }, [theme]);
+        if (!mounted) return; // Don't run on server-side
 
-    // Use a ref or simple document query to find the correct Theme provider content if needed
-    // For now, toggling the body class is the standard Carbon way for global theme
+        // Remove any existing Carbon theme classes and add the current one
+        document.body.classList.remove("cds--g10", "cds--g100");
+        document.body.classList.add(`cds--${theme}`);
+    }, [theme, mounted]);
+
+    // Don't render until mounted to avoid hydration mismatch
+    if (!mounted) return null;
 
     return (
         <HeaderGlobalAction
-            aria-label="Toggle Theme"
+            aria-label={theme === "g10" ? "Switch to dark theme" : "Switch to light theme"}
             tooltipAlignment="end"
             onClick={toggleTheme}
         >

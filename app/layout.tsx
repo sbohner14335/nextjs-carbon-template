@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-import { Content, Theme } from "@carbon/react";
+import { Content } from "@carbon/react";
 import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
@@ -15,11 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Theme theme="g10">
-          <Header />
-          <Content>{children}</Content>
-        </Theme>
+      <body className="cds--g10">
+        <Header />
+        <Content>{children}</Content>
       </body>
     </html>
   );
