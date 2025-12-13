@@ -3,6 +3,11 @@ import path from 'path';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  turbopack: {
+    resolveAlias: {
+      "~*": "*",
+    },
+  },
   // 1. Configure SASS to locate Carbon packages
   sassOptions: {
     includePaths: [path.join(process.cwd(), 'node_modules')],

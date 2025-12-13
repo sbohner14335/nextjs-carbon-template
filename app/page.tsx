@@ -64,7 +64,7 @@ export default function Home() {
                 <h3>Resources</h3>
                 <ul className={styles.resourceList}>
                   <li><a href="https://react.carbondesignsystem.com">Carbon React Docs</a></li>
-                  <li><a href="https://www.carbondesignsystem.com/guidelines/2x-grid/overview">2x Grid System</a></li>
+                  <li><a href="https://carbondesignsystem.com/elements/2x-grid/overview/">2x Grid System</a></li>
                 </ul>
               </div>
             </Tile>

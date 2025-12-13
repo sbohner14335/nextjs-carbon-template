@@ -85,7 +85,7 @@ export function Header() {
                             <SideNavLink href="https://react.carbondesignsystem.com">
                                 Carbon React Docs
                             </SideNavLink>
-                            <SideNavLink href="https://www.carbondesignsystem.com/guidelines/2x-grid/overview">
+                            <SideNavLink href="https://carbondesignsystem.com/elements/2x-grid/overview/">
                                 2x Grid System
                             </SideNavLink>
                         </SideNavItems>
