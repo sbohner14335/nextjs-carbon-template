@@ -6,10 +6,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
     return (
         <ThemeProvider
             attribute="class"
-            defaultTheme="g10"
-            enableSystem={false}
+            defaultTheme="system"
+            enableSystem={true}
             storageKey="carbon-theme"
-            value={{ g10: "cds--g10", g100: "cds--g100" }}
+            themes={["g10", "g100"]}
+            value={{ g10: "cds--g10", g100: "cds--g100", light: "cds--g10", dark: "cds--g100" }}
         >
             {children}
         </ThemeProvider>

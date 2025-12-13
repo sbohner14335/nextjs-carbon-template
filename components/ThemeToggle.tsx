@@ -6,7 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useTheme } from "next-themes";
 
 export function ThemeToggle() {
-    const { theme, setTheme } = useTheme();
+    const { resolvedTheme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -14,13 +14,14 @@ export function ThemeToggle() {
         setMounted(true);
     }, []);
 
-    const currentTheme = useMemo<"g10" | "g100">(
-        () => (theme === "g100" ? "g100" : "g10"),
-        [theme],
+    // Use resolvedTheme to get the actual applied theme (handles "system" -> "light"/"dark")
+    const isDark = useMemo(
+        () => resolvedTheme === "g100" || resolvedTheme === "dark",
+        [resolvedTheme],
     );
 
     const toggleTheme = () => {
-        setTheme(currentTheme === "g10" ? "g100" : "g10");
+        setTheme(isDark ? "g10" : "g100");
     };
 
     // Don't render until mounted to avoid hydration mismatch
@@ -28,11 +29,12 @@ export function ThemeToggle() {
 
     return (
         <HeaderGlobalAction
-            aria-label={currentTheme === "g10" ? "Switch to dark theme" : "Switch to light theme"}
+            aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
             tooltipAlignment="end"
             onClick={toggleTheme}
         >
-            {currentTheme === "g10" ? <Asleep size={20} /> : <Light size={20} />}
+            {isDark ? <Light size={20} /> : <Asleep size={20} />}
         </HeaderGlobalAction>
     );
 }
+

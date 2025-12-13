@@ -16,6 +16,7 @@
     "@carbon/type": "^11.50.0",
     "@ibm/plex": "^6.4.1",
     "next": "16.0.10",
+    "next-themes": "^0.4.6",
     "react": "19.2.1",
     "react-dom": "19.2.1",
     "sass": "^1.96.0"
