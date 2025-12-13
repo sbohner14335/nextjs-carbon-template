@@ -9,7 +9,7 @@ import {
 } from "@carbon/react";
 import { ArrowRight, LogoGithub, LogoReact } from "@carbon/icons-react";
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
