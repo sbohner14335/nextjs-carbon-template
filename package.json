@@ -2,6 +2,7 @@
   "name": "nextjs-carbon-template",
   "version": "0.1.0",
   "private": true,
+  "author": "Stephen Bohner",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

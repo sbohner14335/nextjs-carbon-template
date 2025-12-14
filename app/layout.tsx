@@ -7,6 +7,9 @@ import { Providers } from "./providers";
 export const metadata: Metadata = {
   title: "Carbon Next.js Starter",
   description: "A starter template for building Next.js apps with the Carbon Design System.",
+  authors: [{ name: "Stephen Bohner", url: "https://github.com/sbohner14335/" }],
+  generator: "Next.js",
+  creator: "Stephen Bohner",
 };
 
 export default function RootLayout({
