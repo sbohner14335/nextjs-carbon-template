@@ -4,7 +4,9 @@
   </a>
 </p>
 
-# Carbon + Next.js Starter
+<h1 align="center">
+  Carbon + Next.js Starter
+</h1>
 
 A starter template combining the power of [Next.js](https://nextjs.org) with IBM's [Carbon Design System](https://carbondesignsystem.com).
 
