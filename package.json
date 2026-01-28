@@ -16,7 +16,7 @@
     "@carbon/themes": "^11.64.0",
     "@carbon/type": "^11.50.0",
     "@ibm/plex": "^6.4.1",
-    "next": "16.1.1",
+    "next": "16.1.6",
     "next-themes": "^0.4.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -27,7 +27,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.1.1",
+    "eslint-config-next": "16.1.6",
     "typescript": "^5"
   }
 }
