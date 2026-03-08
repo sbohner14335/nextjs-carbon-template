@@ -5,15 +5,8 @@
 }
 
 .chatHeader {
-  padding-top: 1rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--cds-border-subtle);
-}
-
-.pageTitle {
-  margin: 0;
-  font-size: 2.5rem;
-  line-height: 1.2;
 }
 
 .pageDescription {
@@ -43,10 +36,6 @@
   .chatHeader {
     padding-top: 0.75rem;
     padding-bottom: 1rem;
-  }
-
-  .pageTitle {
-    font-size: 2rem;
   }
 
   .chatContent {
