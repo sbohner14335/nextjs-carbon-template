@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  BusEventType,
   ChatCustomElement,
   MessageResponseTypes,
   type ChatInstance,
@@ -10,6 +11,9 @@ import {
 } from "@carbon/ai-chat";
 import { useCallback, useMemo, useRef } from "react";
 import styles from "./CarbonAiChatClient.module.scss";
+
+const welcomeText =
+  "Hi, I am your template assistant. Ask me anything to validate this Carbon AI chat interface.";
 
 function waitFor(delayMs: number, signal: AbortSignal): Promise<void> {
   return new Promise((resolve, reject) => {
@@ -84,17 +88,26 @@ async function addInlineError(
 
 export function CarbonAiChatClient() {
   const initializedRef = useRef(false);
+  const restartListenerRegisteredRef = useRef(false);
 
   const handleAfterRender = useCallback(async (instance: ChatInstance) => {
+    if (!restartListenerRegisteredRef.current) {
+      instance.on({
+        type: BusEventType.RESTART_CONVERSATION,
+        handler: async (_event, currentInstance) => {
+          await addTextMessage(currentInstance, welcomeText);
+        },
+      });
+
+      restartListenerRegisteredRef.current = true;
+    }
+
     if (initializedRef.current) {
       return;
     }
 
     initializedRef.current = true;
-    await addTextMessage(
-      instance,
-      "Hi, I am your template assistant. Ask me anything to validate this Carbon AI chat interface.",
-    );
+    await addTextMessage(instance, welcomeText);
   }, []);
 
   const handleCustomSendMessage = useCallback(
@@ -142,8 +155,10 @@ export function CarbonAiChatClient() {
 
   const headerConfig = useMemo(
     () => ({
-      title: "Template Assistant",
+      title: "AI",
+      name: "Chat Title",
       hideMinimizeButton: true,
+      showRestartButton: true,
     }),
     [],
   );
