@@ -5,6 +5,10 @@
 .landingPageBanner {
   padding-top: 4rem;
   background-color: var(--cds-ui-01);
+
+  @media (max-width: 671px) {
+    padding-bottom: 4rem;
+  }
 }
 
 .landingPageHeading {

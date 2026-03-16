@@ -21,7 +21,7 @@ export default function Home() {
         <p className={styles.landingPageSubheading}>
           A starter template for building rapid, accessible, and performant web applications with the Carbon Design System.
         </p>
-        <Button href="https://github.com/sbohner14335/nextjs-carbon-template?tab=readme-ov-file#getting-started" renderIcon={ArrowRight} size="lg">
+        <Button href="https://github.com/sbohner14335/nextjs-carbon-template?tab=readme-ov-file#getting-started" target="_blank" renderIcon={ArrowRight} size="lg">
           <LogoGithub />
           &emsp;Get Started
         </Button>
