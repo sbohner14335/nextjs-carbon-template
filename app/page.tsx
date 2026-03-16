@@ -30,7 +30,7 @@ export default function Home() {
       <Column lg={16} md={8} sm={4} className={styles.landingPageContent}>
         <Grid>
           <Column md={4} lg={4} sm={4}>
-            <ClickableTile href="https://carbondesignsystem.com">
+            <ClickableTile onClick={(e) => { e.preventDefault(); window.open("https://carbondesignsystem.com", "_blank"); }}>
               <div className={styles.tileContent}>
                 <Carbon size={32} />
                 <h3>Carbon Design System</h3>
@@ -40,7 +40,7 @@ export default function Home() {
             </ClickableTile>
           </Column>
           <Column md={4} lg={4} sm={4}>
-            <ClickableTile href="https://nextjs.org">
+            <ClickableTile onClick={(e) => { e.preventDefault(); window.open("https://nextjs.org", "_blank"); }}>
               <div className={styles.tileContent}>
                 <Image src="/next.svg" alt="Next.js" width={32} height={32} className={styles.nextLogo} />
                 <h3>Next.js Framework</h3>
@@ -50,7 +50,7 @@ export default function Home() {
             </ClickableTile>
           </Column>
           <Column md={4} lg={4} sm={4}>
-            <ClickableTile href="https://github.com/carbon-design-system/carbon">
+            <ClickableTile onClick={(e) => { e.preventDefault(); window.open("https://github.com/carbon-design-system/carbon", "_blank"); }}>
               <div className={styles.tileContent}>
                 <LogoGithub size={32} />
                 <h3>Carbon GitHub</h3>
@@ -64,8 +64,8 @@ export default function Home() {
               <div className={styles.tileContent}>
                 <h3>Resources</h3>
                 <ul className={styles.resourceList}>
-                  <li><a href="https://react.carbondesignsystem.com">Carbon React Docs</a></li>
-                  <li><a href="https://carbondesignsystem.com/elements/2x-grid/overview/">2x Grid System</a></li>
+                  <li><a href="https://react.carbondesignsystem.com" target="_blank">Carbon React Docs</a></li>
+                  <li><a href="https://carbondesignsystem.com/elements/2x-grid/overview/" target="_blank">2x Grid System</a></li>
                 </ul>
               </div>
             </Tile>

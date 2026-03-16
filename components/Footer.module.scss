@@ -94,27 +94,14 @@
 .socialLinks {
   display: inline-flex;
   gap: $spacing-05;
-  align-items: center;
 }
 
 .socialLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: $icon-primary;
-  text-decoration: none;
   padding: $spacing-03;
-  border-radius: 4px;
-  transition: background-color 0.15s ease;
 
   &:hover {
-    background-color: $layer-hover;
+    background-color: $layer-01;
     color: $icon-primary;
-  }
-
-  &:focus {
-    outline: 2px solid $focus;
-    outline-offset: 2px;
   }
 }
 
