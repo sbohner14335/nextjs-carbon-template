@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.scss";
 import { Content } from "@carbon/react";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <Content>{children}</Content>
+          <Footer />
         </Providers>
       </body>
     </html>
