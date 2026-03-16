@@ -1,0 +1,161 @@
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/react/scss/theme" as *;
+@use "@carbon/react/scss/type" as *;
+@use "@carbon/react/scss/breakpoint" as *;
+
+.footer {
+  background-color: $layer-01;
+  border-top: 1px solid $border-subtle;
+  margin-top: $spacing-09;
+  padding-block: $spacing-07;
+}
+
+.leftColumn {
+  text-align: left;
+}
+
+.centerColumn {
+  text-align: center;
+
+  @include breakpoint-down('md') {
+    text-align: left;
+  }
+}
+
+.rightColumn {
+  text-align: right;
+
+  @include breakpoint-down('md') {
+    text-align: left;
+  }
+}
+
+.footerSection {
+  min-width: 0;
+}
+
+.footerHeading {
+  @include type-style('heading-compact-01');
+  color: $text-primary;
+  margin-block-end: $spacing-05;
+}
+
+.footerText {
+  @include type-style('body-compact-01');
+  color: $text-secondary;
+  margin: 0;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  flex-direction: column;
+  gap: $spacing-03;
+  text-align: center;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    @include type-style('body-compact-01');
+    color: $link-primary;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-primary-hover;
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: $link-visited;
+    }
+  }
+}
+
+.ibmLogo {
+  display: block;
+  margin-inline: auto;
+  color: $text-secondary;
+}
+
+.socialLinks {
+  display: inline-flex;
+  gap: $spacing-05;
+  align-items: center;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $icon-primary;
+  text-decoration: none;
+  padding: $spacing-03;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: $layer-hover;
+    color: $icon-primary;
+  }
+
+  &:focus {
+    outline: 2px solid $focus;
+    outline-offset: 2px;
+  }
+}
+
+.footerBottom {
+  margin-top: $spacing-07;
+  padding-top: $spacing-05;
+  border-top: 1px solid $border-subtle-01;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-05;
+}
+
+.copyright {
+  @include type-style('label-01');
+  color: $text-secondary;
+  margin: 0;
+}
+
+.legalLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+
+  li {
+    @include type-style('label-01');
+
+    &:not(:last-child)::after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 0.75rem;
+      background-color: $border-subtle-01;
+      margin-inline: $spacing-04;
+      vertical-align: middle;
+    }
+  }
+
+  a {
+    @include type-style('label-01');
+    color: $text-secondary;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-primary-hover;
+      text-decoration: underline;
+    }
+  }
+}
