@@ -35,8 +35,10 @@ To use this template:
   - `globals.scss` - Global styles and Carbon theme imports.
   - `layout.tsx` - Root layout with Carbon styles integration.
   - `page.tsx` - Landing page component.
+  - `about/page.tsx` - About page with project details.
 - `components/` - Reusable UI components.
   - `Header.tsx` - Global application header with navigation.
+  - `Footer.tsx` - Site-wide footer with social links, resources, IBM logo, and legal links.
   - `ThemeToggle.tsx` - Component to handle theme switching.
 - `public/` - Static assets.
 
