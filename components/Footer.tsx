@@ -21,24 +21,6 @@ export function Footer() {
 
                 <Column sm={4} md={8} lg={6} className={styles.centerColumn}>
                     <div className={styles.footerSection}>
-                        <h4 className={styles.footerHeading}>Resources</h4>
-                        <ul className={styles.footerLinks}>
-                            <li>
-                                <Link href="https://carbondesignsystem.com" target="_blank" rel="noopener noreferrer">
-                                    Carbon Design System
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="https://nextjs.org" target="_blank" rel="noopener noreferrer">
-                                    Next.js
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </Column>
-
-                <Column sm={4} md={8} lg={5} className={styles.rightColumn}>
-                    <div className={styles.footerSection}>
                         <h4 className={styles.footerHeading}>Connect</h4>
                         <div className={styles.socialLinks}>
                             <Link
@@ -69,6 +51,24 @@ export function Footer() {
                                 <LogoLinkedin size={20} />
                             </Link>
                         </div>
+                    </div>
+                </Column>
+
+                <Column sm={4} md={8} lg={5} className={styles.rightColumn}>
+                    <div className={styles.footerSection}>
+                        <h4 className={styles.footerHeading}>Resources</h4>
+                        <ul className={styles.footerLinks}>
+                            <li>
+                                <Link href="https://carbondesignsystem.com" target="_blank" rel="noopener noreferrer">
+                                    Carbon Design System
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="https://nextjs.org" target="_blank" rel="noopener noreferrer">
+                                    Next.js
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                 </Column>
             </Grid>

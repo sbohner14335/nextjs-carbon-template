@@ -56,7 +56,6 @@
   display: inline-flex;
   flex-direction: column;
   gap: $spacing-03;
-  text-align: center;
 
   @include breakpoint-down('md') {
     text-align: left;
