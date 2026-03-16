@@ -41,6 +41,13 @@ export function Header() {
                             <HeaderMenuItem href="/about" isCurrentPage={pathname === "/about"} as={Link}>
                                 About
                             </HeaderMenuItem>
+                            <HeaderMenuItem
+                                href="/chat"
+                                isCurrentPage={pathname === "/chat" || pathname.startsWith("/chat/")}
+                                as={Link}
+                            >
+                                Chat
+                            </HeaderMenuItem>
                         </HeaderNavigation>
                         <HeaderGlobalBar>
                             <HeaderGlobalAction
