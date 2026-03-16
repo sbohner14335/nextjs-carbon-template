@@ -8,6 +8,7 @@ import {
   type CustomSendMessageOptions,
   type MessageRequest,
   type MessageResponse,
+  type LayoutConfig,
 } from "@carbon/ai-chat";
 import { useCallback, useMemo, useRef } from "react";
 import styles from "./CarbonAiChatClient.module.scss";
@@ -156,7 +157,7 @@ export function CarbonAiChatClient() {
   const headerConfig = useMemo(
     () => ({
       title: "AI",
-      name: "Chat Title",
+      name: "Chat",
       hideMinimizeButton: true,
       showRestartButton: true,
     }),
@@ -166,6 +167,13 @@ export function CarbonAiChatClient() {
   const launcherConfig = useMemo(
     () => ({
       isOn: false,
+    }),
+    [],
+  );
+
+  const layoutConfig: LayoutConfig = useMemo(
+    () => ({
+      showFrame: false,
     }),
     [],
   );
@@ -187,6 +195,7 @@ export function CarbonAiChatClient() {
         openChatByDefault={true}
         header={headerConfig}
         launcher={launcherConfig}
+        layout={layoutConfig}
         messaging={messagingConfig}
         onAfterRender={handleAfterRender}
       />
