@@ -72,7 +72,7 @@ export function Header() {
                         </HeaderGlobalBar>
                     </CarbonHeader>
                     <SideNav
-                        aria-label="Resources"
+                        aria-label="Application navigation and resources"
                         isChildOfHeader={true}
                         isPersistent={false}
                         isRail={true}
@@ -80,6 +80,16 @@ export function Header() {
                         onOverlayClick={onClickSideNavExpand}
                     >
                         <SideNavItems>
+                            <SideNavLink
+                                href="/chat"
+                                as={Link}
+                                isActive={pathname === "/chat" || pathname.startsWith("/chat/")}
+                                onClick={() => {
+                                    if (isSideNavExpanded) onClickSideNavExpand();
+                                }}
+                            >
+                                Chat
+                            </SideNavLink>
                             <SideNavLink href="https://carbondesignsystem.com">
                                 Carbon Design System
                             </SideNavLink>
