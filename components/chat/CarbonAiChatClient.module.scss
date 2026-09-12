@@ -1,0 +1,23 @@
+.chatRoot {
+  inline-size: 100%;
+  block-size: 100%;
+  min-block-size: 0;
+}
+
+.chatContainer {
+  position: relative;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  min-block-size: 0;
+  max-block-size: 100%;
+  border: 1px solid var(--cds-border-subtle);
+  background-color: var(--cds-layer-01);
+  overflow: hidden;
+}
+
+@media (max-width: 42rem) {
+  .chatContainer {
+    min-block-size: 0;
+  }
+}

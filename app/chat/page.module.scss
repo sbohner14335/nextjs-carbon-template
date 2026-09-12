@@ -1,0 +1,39 @@
+.chatPage {
+  min-height: 100dvh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pageDescription {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  max-inline-size: 48rem;
+  color: var(--cds-text-secondary);
+  line-height: 1.6;
+}
+
+.chatContent {
+  block-size: calc(100dvh - 16rem);
+  min-block-size: 34rem;
+}
+
+.loadingState {
+  padding: 1rem 0;
+}
+
+@media (max-width: 42rem) {
+  .chatPage {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .chatHeader {
+    padding-top: 0.75rem;
+    padding-bottom: 1rem;
+  }
+
+  .chatContent {
+    block-size: calc(100dvh - 14rem);
+    min-block-size: 24rem;
+  }
+}

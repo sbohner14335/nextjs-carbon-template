@@ -35,11 +35,13 @@ To use this template:
   - `globals.scss` - Global styles and Carbon theme imports.
   - `layout.tsx` - Root layout with Carbon styles integration.
   - `page.tsx` - Landing page component.
-  - `about/page.tsx` - About page with project details.
+  - `about/page.tsx` - About page describing template features.
+  - `chat/page.tsx` - Carbon AI chat template page with mock messaging.
 - `components/` - Reusable UI components.
   - `Header.tsx` - Global application header with navigation.
   - `Footer.tsx` - Site-wide footer with social links, resources, IBM logo, and legal links.
   - `ThemeToggle.tsx` - Component to handle theme switching.
+  - `chat/CarbonAiChatClient.tsx` - Client-only Carbon AI chat wrapper.
 - `public/` - Static assets.
 
 ## Technologies
