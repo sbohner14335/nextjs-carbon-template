@@ -4,12 +4,15 @@
 
 .landingPageBanner {
   padding-top: 4rem;
-  padding-bottom: 4rem;
   background-color: var(--cds-ui-01);
+
+  @media (max-width: 671px) {
+    padding-bottom: 4rem;
+  }
 }
 
 .landingPageHeading {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 8vw, 3.5rem);
   margin-bottom: 2rem;
 }
 
@@ -20,8 +23,12 @@
 }
 
 .landingPageContent {
-  padding-top: 2rem;
   padding-bottom: 2rem;
+
+  /* Add spacing between stacked tile cards on mobile */
+  :global(.cds--css-grid-column) {
+    margin-bottom: 1rem;
+  }
 }
 
 .tileContent {

@@ -192,6 +192,8 @@ export function CarbonAiChatClient() {
       <ChatCustomElement
         className={styles.chatContainer}
         aiEnabled={true}
+        shouldSanitizeHTML={true}
+        disableCustomElementMobileEnhancements={true}
         openChatByDefault={true}
         header={headerConfig}
         launcher={launcherConfig}
