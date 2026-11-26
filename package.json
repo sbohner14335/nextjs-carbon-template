@@ -23,7 +23,7 @@
     "sass": "^1.96.0"
   },
   "devDependencies": {
-    "@types/node": "^25",
+    "@types/node": "^26.0.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
